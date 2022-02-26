@@ -37,7 +37,7 @@ uint64_t nPrime(uint64_t n) {
 
 uint64_t nextPrime(uint64_t value) {
     const int size = 100000;
-    int* a = new int[size + 1];
+    int* a = new int[size];
     for (int i = 0; i < size; i++) {
         a[i] = i;
     }
@@ -51,13 +51,14 @@ uint64_t nextPrime(uint64_t value) {
     for (int i = value + 1; i < size; i++) {
         if (a[i]) {
             return a[i];
+            break;
         }
     }
 }
 
 uint64_t sumPrime(uint64_t hbound) {
     const int size = hbound;
-    int* a = new int[size + 1];
+    int* a = new int[size];
     int sum = 0;
     for (int i = 0; i < size; i++) {
         a[i] = i;
@@ -75,4 +76,5 @@ uint64_t sumPrime(uint64_t hbound) {
         }
     }
     return sum;
+    break;
 }

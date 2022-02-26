@@ -46,8 +46,7 @@ const int size = 100000;
         a[i] = i;
     }
 
-    for (int i = 2; i * i < size; i++)
-    {
+    for (int i = 2; i * i < size; i++) {
         if (a[i]) {
             for (int j = i * i; j <= size; j += i) {
                 a[j] = 0;
@@ -57,10 +56,8 @@ const int size = 100000;
 
     for (int i = value + 1; i < size; i++)
     {
-        if (a[i])
-        {
-            return a[i];
-        }
+        if (a[i]) {
+            return a[i]; }
     }
 }
 
@@ -77,16 +74,13 @@ const int size = hbound;
     {
         if (a[i]) {
             for (int j = i * i; j < size; j += i) {
-                a[j] = 0;
-            }
+                a[j] = 0; }
         }
     }
     
     for (int i = 2; i < size; i++)
     {   
         if (a[i]) {
-            sum += a[i];
-        }
+            sum += a[i]; }
     }
-    return sum;
-}
+    return sum; }

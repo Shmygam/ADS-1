@@ -4,7 +4,7 @@
 
 
 bool checkPrime(uint64_t value) {
-for (int i = 2; i <= sqrt(value); i++) {
+for (int i = 2; i < value; i++) {
         if (value % i == 0) {
             return false;
         }
@@ -13,21 +13,21 @@ for (int i = 2; i <= sqrt(value); i++) {
 }
 
 uint64_t nPrime(uint64_t n) {
-const int size = 100000;
+    const int size = 100000;
     int schet = 1;
     int chislo = 2;
     int* a = new int[size];
 
-    for (int i = 2; i < sqrt(size); i++) {
+    for (int i = 2; i < size; i++) {
         a[i] = 1;
     }
 
     while (schet != n) {
-        for (int i = 2 * chislo; i < sqrt(size); i += chislo) {
+        for (int i = 2 * chislo; i < size; i += chislo) {
             a[i] = 0;
         }
 
-        for (int i = chislo + 1; i < sqrt(size); i++) {
+        for (int i = chislo + 1; i < size; i++) {
             if (a[i] == 1) {
                 chislo = i;
                 break;
@@ -42,11 +42,11 @@ uint64_t nextPrime(uint64_t value) {
 const int size = 100000;
     int* a = new int[size + 1];
 
-    for (int i = 0; i <= size; i++) {
+    for (int i = 0; i < size; i++) {
         a[i] = i;
     }
 
-    for (int i = 2; i * i <= size; i++)
+    for (int i = 2; i * i < size; i++)
     {
         if (a[i]) {
             for (int j = i * i; j <= size; j += i) {
@@ -69,14 +69,14 @@ const int size = hbound;
     int* a = new int[size + 1];
     int sum = 0;
 
-    for (int i = 0; i <= size; i++) {
+    for (int i = 0; i < size; i++) {
         a[i] = i;
     }
 
-    for (int i = 2; i * i <= size; i++)
+    for (int i = 2; i * i < size; i++)
     {
         if (a[i]) {
-            for (int j = i * i; j <= size; j += i) {
+            for (int j = i * i; j < size; j += i) {
                 a[j] = 0;
             }
         }

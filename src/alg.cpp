@@ -54,10 +54,10 @@ const int size = 100000;
         }
     }
 
-    for (int i = value + 1; i < size; i++)
-    {
+    for (int i = value + 1; i < size; i++) {
         if (a[i]) {
-            return a[i]; }
+            return a[i]; 
+        }
     }
 }
 
@@ -70,16 +70,14 @@ const int size = hbound;
         a[i] = i;
     }
 
-    for (int i = 2; i * i < size; i++)
-    {
+    for (int i = 2; i * i < size; i++) {
         if (a[i]) {
             for (int j = i * i; j < size; j += i) {
                 a[j] = 0; }
         }
     }
     
-    for (int i = 2; i < size; i++)
-    {   
+    for (int i = 2; i < size; i++) {   
         if (a[i]) {
             sum += a[i]; }
     }

@@ -59,9 +59,9 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    const int size = hbound;
-    int* a = new int[size];
-    int sum = 0;
+    const uint64_t size = hbound;
+    uint64_t* a = new uint64_t[size];
+    uint64_t sum = 0;
     for (int i = 0; i < size; i++) {
         a[i] = i;
     }

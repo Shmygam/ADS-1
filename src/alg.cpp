@@ -50,8 +50,8 @@ uint64_t nextPrime(uint64_t value) {
     }
     for (int i = value + 1; i < size; i++) {
         if (a[i]) {
-            return a[i];
-            break;
+            int o = a[i];
+            return o;
         }
     }
 }
@@ -76,5 +76,4 @@ uint64_t sumPrime(uint64_t hbound) {
         }
     }
     return sum;
-    break;
 }

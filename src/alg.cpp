@@ -38,6 +38,7 @@ uint64_t nPrime(uint64_t n) {
 uint64_t nextPrime(uint64_t value) {
     const int size = 100000;
     int* a = new int[size];
+    int o = 0;
     for (int i = 0; i < size; i++) {
         a[i] = i;
     }
@@ -50,10 +51,11 @@ uint64_t nextPrime(uint64_t value) {
     }
     for (int i = value + 1; i < size; i++) {
         if (a[i]) {
-            int o = a[i];
-            return o;
+            o = a[i];
+            break;
         }
     }
+    return o;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
